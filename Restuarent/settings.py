@@ -26,7 +26,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS=['*']
 
 
 # Application definition
@@ -129,3 +129,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True  # allow all (for testing)
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://restaurant-backend-6sgm.onrender.com",
+    "https://*.onrender.com",
+]
