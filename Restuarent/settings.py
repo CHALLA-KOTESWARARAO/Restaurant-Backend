@@ -134,3 +134,10 @@ CSRF_TRUSTED_ORIGINS = [
     "https://restaurant-backend-6sgm.onrender.com",
     "https://*.onrender.com",
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.JSONParser',
+    ]
+}
+CORS_ALLOW_CREDENTIALS = True
