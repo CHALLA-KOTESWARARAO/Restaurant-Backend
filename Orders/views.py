@@ -9,7 +9,7 @@ def all_orders(req):
     orders=OrdersTB.objects.all()
     try:
         if orders:
-            ord=UserSerializers(orders,many=all)
+            ord=UserSerializers(orders,many=True)
             return Response({'all_orders':ord.data})
     except FileNotFoundError:
         return Response({'Empty':'no orders exist'})
